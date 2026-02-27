@@ -1,16 +1,80 @@
-# React + Vite
+Swiggy-Style Food Ordering Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Swiggy-inspired food ordering web application built as part of the Namaste React course, focusing on modern React concepts, performance optimization, and clean UI architecture.
 
-Currently, two official plugins are available:
+✨ Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Dynamic Restaurant & Product Listing
 
-## React Compiler
+Integrated a demo REST API to fetch and display restaurants and food items
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Rendered product details such as name, image, cuisine, ratings, and delivery time
 
-## Expanding the ESLint configuration
+Search & Filter Functionality
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Implemented real-time search to filter restaurants by name
+
+Added a Top Rated Restaurants filter based on ratings
+
+Multi-Page Navigation
+
+Created multiple pages (Home, Restaurant Menu, Cart, Login) using React Router
+
+Authentication UI
+
+Designed Login and Logout user interfaces (UI-level authentication flow)
+
+Performance Optimization
+
+Implemented Lazy Loading and React Suspense for route-based code splitting
+
+Improved initial load time by loading components only when required
+
+Reusable & Scalable Architecture
+
+Used Higher-Order Components (HOCs) to enhance restaurant cards and highlight promoted restaurants
+
+Followed component-based architecture for better reusability and maintainability
+
+Modern UI Development
+
+Clean, responsive layout inspired by Swiggy’s design system
+
+Optimized UI rendering with conditional rendering and shimmer (loading) effects
+
+🛠️ Tech Stack
+
+Frontend: React, JavaScript (ES6+)
+
+Routing: React Router
+
+Styling: Tailwind CSS / CSS
+
+State Management: React Hooks
+
+Optimization: Lazy Loading, Suspense
+
+API Integration: Demo REST API
+
+Build Tool: Vite
+
+🧠 What I Learned
+
+Building scalable React applications using reusable components
+
+Implementing search, filtering, and conditional rendering
+
+Optimizing performance with lazy loading and code splitting
+
+Using Higher-Order Components to enhance UI behavior
+
+Structuring real-world React projects with clean folder organization
+
+🚀 How to Run Locally
+git clone <repository-url>
+cd swiggy-clone
+npm install
+npm run dev
+📌 Note
+
+This project was developed as a learning-focused implementation to understand core React concepts and frontend architecture patterns commonly used in production applications.
