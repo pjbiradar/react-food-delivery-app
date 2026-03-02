@@ -20,7 +20,7 @@ const UseRestaurantmenu = (resid)=>{
       const json = await data.json();
       
         setData(json);
-        console.log(data);
+        // console.log(data);
 
         //fetch restaurant name
         // const nameofres = json?.data?.cards[2]?.card?.card?.info;

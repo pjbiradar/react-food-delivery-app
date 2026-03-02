@@ -2,6 +2,7 @@
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import useRestaurantmenu from "../Utils/UseRestaurantmenu";
+import RestaurantCategory from "./RestaurantCategory";
 
 
 export const RestaurantMenu = ()=>{
@@ -10,21 +11,33 @@ export const RestaurantMenu = ()=>{
     //fetch restaurant name
     
 
+    //restaurant menu according to the particular id
     const data = useRestaurantmenu(resid);
 
+    //fecth restaurnt name
     const nameres = data?.data?.cards[2]?.card?.card?.info;
-    // console.log(nameres);
+
+    //this is list of menuitems of that particular id restaurant
     const res = data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+    console.log("ress",res);   
+
+    const MENU_TYPE="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
+    const categories = res?.filter(c => c.card?.card?.["@type"] === MENU_TYPE);
+    console.log(categories);
 
     return  data === null ? (<Shimmer/>):
     (
 
         
-        <div>
-            <h2>{nameres.name}</h2>
+        <div className="text-center ">
+            <h2 className="font-bold  my-10 text-2xl">{nameres.name}</h2>
+            {/* accordian for categories */}
+            {categories.map((category)=><RestaurantCategory categorydata ={category?.card?.card}/>)}
+
+
 
           
-           {res.map((res,index)=>{
+           {/* {res.map((res,index)=>{
             return(
                 <div key={index}>
                 {res?.card?.card?.itemCards.map((item)=>{
@@ -39,7 +52,7 @@ export const RestaurantMenu = ()=>{
             
             </div>
             )
-           })}
+           })} */}
            
         </div>
     )
